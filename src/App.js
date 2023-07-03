@@ -25,7 +25,7 @@ class App extends Component {
             this.setState(
               (state, props) =>{
               return {
-                name: {firstName: 'Marko', lastName: 'Petrovic'},
+                name: {firstName: 'Marko', lastName: 'Markovic'},
               }            
             }, 
             () => {
