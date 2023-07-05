@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+import Card from "../card/card.component";
 import "./card-list.styles.css"; // Uključite CSS fajl sa stilovima
 
 class CardList extends Component {
@@ -7,17 +9,12 @@ class CardList extends Component {
     
     return (
       <div className="card-list"> {/* Dodajte className atribut */}
-        {monsters.map((monster) => (
-          <div className="card-container" key={monster.id}>
-            <img
-              alt={`monster ${monster.name}`}
-              src={`https://robohash.org/${monster.id}?set=set2`}
-              style={{ width: "180px", height: "180px" }}
-            />
-            <h2>{monster.name}</h2>
-            <p>{monster.email}</p>
-          </div>
-        ))}
+        {monsters.map((monster) => {
+          
+          return (
+          <Card monster={monster} />
+        );
+        })}
       </div>
     );
   }
